@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab A - Sender</title>
+  <script>
+
+    function openTabB() {
+      const tabB = window.open('http://192.168.0.105:8081/tabB.html', 'TabB');
+      const sendMessage = () => {
+        const message = document.getElementById('message').value;
+        // Write logic for sending message to tabB.
+      };
+
+      document.getElementById('sendMessage').onclick = sendMessage;
+    }
+
+  </script>
+</head>
+<body onload="openTabB()">
+  <h1>Tab A - Sender</h1>
+  <input type="text" id="message" placeholder="Type a message">
+  <button id="sendMessage">Send Message</button>
+</body>
+</html>
