@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tab B - Receiver</title>
   <script>
-    // Handle message from TabA
+    window.addEventListener('message', event => {
+      const message = event.data;
+      if (event.origin === 'http://192.168.0.105:8080') {
+        document.getElementById('receivedMessage').innerText = `Received: ${message}`;
+      }
+    });
   </script>
 </head>
 <body>

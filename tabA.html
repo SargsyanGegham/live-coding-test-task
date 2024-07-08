@@ -10,12 +10,12 @@
       const tabB = window.open('http://192.168.0.105:8081/tabB.html', 'TabB');
       const sendMessage = () => {
         const message = document.getElementById('message').value;
-        // Write logic for sending message to tabB.
+        tabB.postMessage(message, '*');
       };
 
       document.getElementById('sendMessage').onclick = sendMessage;
     }
-
+    
   </script>
 </head>
 <body onload="openTabB()">
