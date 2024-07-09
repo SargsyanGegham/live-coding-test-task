@@ -8,10 +8,8 @@
 
     function openTabB() {
       const tabB = window.open('http://localhost:8081/tabB.html', 'TabB');
-      const sendMessage = () => {
-        const message = document.getElementById('message').value;
-        tabB.postMessage(message, '*');
-      };
+      
+      // Write logic for sending message to tabB.
 
       document.getElementById('sendMessage').onclick = sendMessage;
     }
