@@ -7,7 +7,7 @@
   <script>
 
     function openTabB() {
-      const tabB = window.open('http://192.168.0.105:8081/tabB.html', 'TabB');
+      const tabB = window.open('http://localhost:8081/tabB.html', 'TabB');
       const sendMessage = () => {
         const message = document.getElementById('message').value;
         tabB.postMessage(message, '*');

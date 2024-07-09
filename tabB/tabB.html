@@ -7,7 +7,7 @@
   <script>
     window.addEventListener('message', event => {
       const message = event.data;
-      if (event.origin === 'http://192.168.0.105:8080') {
+      if (event.origin === 'http://localhost:8080') {
         document.getElementById('receivedMessage').innerText = `Received: ${message}`;
       }
     });
